@@ -17,6 +17,7 @@ print(f1(1, 2))
 
 # YOUR CODE HERE
 
+# Can use built in sum() function
 def f2(*args):
     total = 0
     for arg in args:
@@ -40,11 +41,8 @@ print(f2(*a))    # Should print 22
 
 # YOUR CODE HERE
 
-def f3(num1, num2 = 0):
-    if num2:
-        return num1 + num2
-    elif num1:
-        return num1 + 1
+def f3(num1, num2 = 1):
+    return num1 + num2
 
 print(f3(1, 2))  # Should print 3
 print(f3(8))     # Should print 9

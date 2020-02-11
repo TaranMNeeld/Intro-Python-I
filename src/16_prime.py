@@ -1,3 +1,5 @@
+import math
+
 def get_prime_numbers(max_num):
     # make an array with all numbers between 2 and the input number
     numbers = [int(i) for i in range(2, max_num)]
@@ -5,8 +7,10 @@ def get_prime_numbers(max_num):
     # loop through each number between 2 and the input number
     for num in range(2, max_num):
 
-        # loop through every number from 2 to the (current number - 1)
-        for i in range(2, num):
+        numSqrt = math.sqrt(num)
+
+        # loop through every number from 2 to the sqrt of current num
+        for i in range(2, math.ceil(numSqrt)):
 
             # test if each number between 2 and the input number is divisible by any number between 2 and (itself - 1)
             if num % i == 0:
